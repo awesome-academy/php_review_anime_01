@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/home', 'PageController@showHome');
+Route::get('/anime', 'PageController@showAnime');
+Route::get('/video', 'PageController@showVideo');
+Route::get('/new', 'PageController@showNew');
+Route::get('/contact', 'PageController@showContact');
+Route::get('/anime.show_anime', 'PageController@showDetail');
+Route::get('/video.show_video', 'PageController@showDetail');
+Route::get('/new.new_detail', 'PageController@showNewDetail');
+Auth::routes();
